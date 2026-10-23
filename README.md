@@ -1,16 +1,9 @@
-# ERP Software Base Module (Vite + Vanilla JS)
+# Módulo Logística e Inventario — ERP (Vite + Vanilla JS)
 
-Minimal single-page app serving as an Enterprise Resource Planning (ERP) software base module. It provides the common foundation for building custom ERP modules: master data management (Entities) and linked transactional documents (Documents) with create/edit/delete/search, validation, and browser localStorage persistence — using Vite and vanilla HTML, CSS, and JavaScript.
+El presente repositorio contiene el MVP del módulo de Logística e Inventario del ERP, el cual está desarrollado por Juan Pablo Valladares, Estefano Gutiérrez, Florencia Casas, Catalina Cifuentes, Gonzalo Romero, y Martín Salas.
+Se construye sobre el template base de Speckit
 
-The user interface is fully in **Spanish** (default terms: Entidad / Documento; module name: Módulo Base ERP), including labels, validation messages, empty states, and dialogs.
-
-Entities carry standard ERP master-data fields (name, code, tax ID, email, phone, address, category, target date, credit limit, payment terms). Documents use series + folio numbering and carry a monetary breakdown (subtotal, discount, tax, total), currency, payment terms, notes, quantity, dates, and status.
-
-The app presents itself as a coherent ERP workspace:
-
-- **Workspace shell** — every screen lives inside a branded chrome: a top bar with a logo (an SVG monogram derived from the module name) and module name, plus a persistent sidebar of module buttons (Panel, Entidades, Documentos, Búsqueda). The active module is highlighted (`aria-current="page"`), and the sidebar collapses to an icon rail on narrow viewports.
-- **Home dashboard** — the entry screen offers quick-action buttons for key ERP tasks (new entity, new document, open management areas, find records) and live statistic cards showing record counts.
-- **Design tokens** — styling is driven by CSS custom properties in `src/styles.css`, so branding changes apply globally.
+La visión que tenemos del producto es poder entregar una herramienta a empresas (como por ejemplo, pymes) que les permita trazar en todo momento sus existencias (stock) y hacia dónde de van moviendo, evitando así una logística llevada a cabo a lápiz y papel que acarrea distintos problemas con un entorno cada vez más digitalizado (pérdidas por malos registros, mal uso y manejo de la información). Consideramos los roles de arquitecto o administrador del módulo, que puedan acceder al software con control total, y a los usuarios (los distintos actores que juegan un papel en una bodega), para que puedan tener control sobre los flujos de los distintos stocks, supervisiones, movimientos, entre otras actividades. El MVP que se busca realizar contará con funciones de catálogo de productos, registros, movimientos, stocks por cada producto, con posibilidad de ampliar a más actividades en iteraciones futuras con los modelos de IA. El historial de uso de GenIA con los distintos prompts quedará registrado como un anexo con modelo, fecha, y secuencia de prompts.
 
 ## Setup
 
